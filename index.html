@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Tomáš</title>
+  <title>Portfólio - Tomáš Tkáčik</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
     header { text-align: center; }
@@ -14,33 +14,108 @@
 </head>
 <body>
   <header>
-    <h1>Tomáš - Portfólio</h1>
-    <p>PLC & MES Engineer | Web Developer</p>
+    <h1>Tomáš Tkáčik - Portfolio</h1>
+    <p>Developer</p>
   </header>
 
   <section>
-    <h2>O mne</h2>
-    <p>Som senior PLC programátor so skúsenosťami v priemyselnej automatizácii a vývoji webových aplikácií. 
-    Zameriavam sa na integráciu výrobných liniek so softvérovými riešeniami.</p>
+    <h2>About me</h2>
+    <p>A graduate industrial computer scientist with many years of experience in programming industrial machines and robots. 
+      With a passion for programming applications to simplify everyday tasks. </p>
   </section>
 
   <section>
-    <h2>Projekty</h2>
+    <h2>Projects</h2>
     <div class="project">
-      <strong>MES integračný systém</strong><br>
-      <em>Siemens S7-1500, Proficy Cimplicity, SQL, C#</em>
-      <p>Vyvinul som systém na monitorovanie výroby a integráciu dát z PLC do databázy.</p>
+      <strong>Maintenance Logs</strong><br>
+      <em>C#, .Net, SQL Server</em>
+      <p>New application that was quickly developed to maintain
+          overlook of team work on site, later it grow to also input
+          nonconformity found on new equipment and machines to keep
+          track with suppliers if these nonconformity was resolved.</p>
     </div>
     <div class="project">
-      <strong>Webová aplikácia pre výrobný reporting</strong><br>
-      <em>ASP.NET Core, SQL Server, Docker</em>
-      <p>Vytvoril som modernú webovú aplikáciu na reporting výrobných dát.</p>
+      <strong>Part Counter</strong><br>
+      <em>C# .net, Kepserver, SQL Server</em>
+      <p>After maintenance moved some screens on line that displayed
+        this information, logistic workers didn’t have access to
+        information when next change of production will be made. I was
+        asked if it is possible to read this information from PLC and
+        display it on standard PC screen. This was my first simple
+        application that worked with OPC server.</p>
+    </div>
+    <div class="project">
+      <strong>Overwatch</strong><br>
+      <em>Visual studio, S7.net wrapper, c# .net, GIMP (for design of icons etc.)</em>
+      <p>Need for new application rose when plant workers didn’t have
+          actual information about what material they are going to process
+          next based on the conveyor system that was coming from the
+          previous plant (waste processing). Without the possibility to use
+          OPC server a s7.net wrapper was used to obtain information
+          directly from registers of Siemens PLC and it was used to display
+          information on screen for the workers to know what kind of
+          material is being processed. It helped the company to be more efficient.</p>
+    </div>
+        <div class="project">
+      <strong>Q-slides</strong><br>
+      <em>C# .Net, SQL, OPC Server</em>
+      <p>Small application that read out more data from OPC server.
+        When production batch changed to new reference, application
+        automatically looked for images corresponding to that reference
+        and displayed the first image. Then during each part produced
+        by the line, this image changed to the next. It cycled through
+        images of zonal control, quality alerts etc.</p>
+    </div>
+        <div class="project">
+      <strong>LineSpy</strong><br>
+      <em>C#.net, Visual studio, OPC Server</em>
+      <p>Small visual application that displayed information about current
+          and past status of all production lines in plant. It graphed the
+          speed of production for last hour of each line, showed the
+          current producing batch etc.</p>
+    </div>
+        <div class="project">
+      <strong>Process Control Tool</strong><br>
+      <em>Visual studio, C#.net, SQL, Microsoft SQL Management studio,
+          KepServer (Dataloger), PdfSharp (to fill PDF form with
+          parameters for printing), hashing of password to secure
+          password in hash form in database</em>
+      <p>Application that used OPC server (KepServer Datalogger) to
+        store all parameters of whole lines during “save of parameters”
+        operation to SQL database. The whole application uses login with
+        password verification to permit access only to authorized
+        personal to accept or reject new changes to the parameters
+        done on the press line. User with operator status is capable only
+        to add comment to the changes made by him with parameters
+        and view (or print in PDF) master copy of approved parameters.
+        Engineering can also access history of changes to parameters
+        (for audit purpose) and is also capable to track process
+        parameters during each production (like press force for
+        example).</p>
+    </div>
+            <div class="project">
+      <strong>Process control tool – Notify center</strong><br>
+      <em>C#.net, Visual studio, SQL</em>
+      <p>Small windows service to send email report on daily basis with
+        information about database status to responsible team
+        (parameters waiting for approval etc.)</p>
+    </div>
+        <div class="project">
+      <strong>SmartHome</strong><br>
+      <em>ModeBus, NodeRed, InfluxDb, Grafana, Windows server, Arduino
+      programming, ESP programming, PCB desing, MQTT</em>
+      <p>Integrating and automatizating processes in household to
+      smart home ecosystem. From light control, blinds control based
+      on sun orientation and position, to heating control based on
+      presence of people in house to energy management, water
+      usage etc.</p>
     </div>
   </section>
 
   <section>
-    <h2>Kontakt</h2>
-    <p>Email: tomas@example.com | <a href="https://linkedin.com/in/tomas">LinkedIn</a> | <a href="https://github.com/tomas">GitHub</a></p>
+    <h2>Contact</h2>
+    <p>Email: tkacikto#gmail.com.com | <a href="https://linkedin.com/in/tomas">LinkedIn</a> | <a href="https://github.com/tomas">GitHub</a></p>
   </section>
 </body>
 </html>
+
