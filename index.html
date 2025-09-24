@@ -1,200 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Tomáš Tkáčik</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Tomáš Tkáčik | PLC/MES & .NET</title>
+  <meta name="description" content="PLC & MES engineer and .NET developer. I connect production lines with SQL/SCADA and build internal tools with measurable impact." />
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f4; }
-    header { text-align: center; }
-    section { background: white; padding: 20px; margin: 20px auto; max-width: 800px; border-radius: 10px; }
-    h1, h2 { color: #333; }
-    .project { margin-bottom: 15px; }
+    :root { --w: 920px; }
+    body { font-family: system-ui, Arial, sans-serif; margin:0; background:#f6f7f9; color:#111827; line-height:1.55; }
+    header { text-align:center; padding:56px 20px 24px; }
+    header h1 { margin:0 0 6px; font-size:2rem; }
+    header p { margin:0; color:#4b5563; }
+    main { max-width:var(--w); margin:0 auto; padding:0 20px 56px; }
+    section { background:#fff; border-radius:14px; padding:22px; margin:16px 0; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    h2 { margin:0 0 12px; font-size:1.25rem; }
+    .grid { display: flex; 
+    flex-direction: column; 
+    gap: 12px;  }
+    @media (min-width: 820px) { .grid { grid-template-columns:1fr 1fr; } }
+    .card h3 { margin:0 0 6px; font-size:1.05rem; }
+    .meta { font-size:.9rem; color:#6b7280; margin-bottom:6px; }
+    ul { margin:8px 0 0 18px; }
+    a { color:#2563eb; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .contact a { margin-right:14px; }
+    .badge { display:inline-block; font-size:.8rem; background:#eef2ff; padding:2px 8px; border-radius:999px; margin-left:6px; }
+    .top-cta { margin-top:8px; }
+    button { border:0; border-radius:10px; padding:10px 14px; box-shadow:0 2px 8px rgba(0,0,0,.08); }
   </style>
 </head>
 <body>
   <header>
-    <h1>Tomáš Tkáčik - Portfolio</h1>
-    <p>Developer</p>
+    <h1>Tomáš Tkáčik</h1>
+    <p>PLC & MES Engineer · .NET Developer</p>
+    <div class="top-cta">
+      <a href="mailto:tkacikto@gmail.com"><button>Contact me</button></a>
+      <!-- <a href="cv_Tomas_Tkacik.pdf"><button>Download CV</button></a> -->
+    </div>
   </header>
 
-  <section>
-    <h2>About me</h2>
-    <p>A graduate industrial computer scientist with many years of experience in programming industrial machines and robots. 
-      With a passion for programming applications to simplify everyday tasks. </p>
-  </section>
+  <main>
+    <section>
+      <h2>About me</h2>
+      <p>Industrial automation specialist building integrations between PLC (Siemens/OPC) and SQL/SCADA.
+         I focus on fast, maintainable tools with clearly measured outcomes for production.</p>
+      <p><strong>Focus:</strong> C#/.NET, SQL Server, OPC (KepServer), S7 communication, dashboards, reporting.</p>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project">
-      <strong>Maintenance Logs</strong><br>
-      <em>C#, .Net, SQL Server</em>
-      <p>
-        <ul>
-          <li>
-            Maintain overlook of team work on site
-          </li>
-          <li>
-            Input nonconformity found on equipment and machines
-          </li>
-          <li>
-            Keep track with suppliers if these nonconformity was resolved
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Introduced tracability of claims</em>
-      </p>
-    </div>
-    <div class="project">
-      <strong>Part Counter</strong><br>
-      <em>C# .net, Kepserver, SQL Server</em>
-      <p>
-        <ul>
-          <li>
-            Vizualization of production status on lines
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Increased information flow on shopflor</em>
-      </p>
-    </div>
-    <div class="project">
-      <strong>Overwatch</strong><br>
-      <em>Visual studio, S7.net wrapper, c# .net, GIMP (for design of icons etc.)</em>
-      <p>
-        <ul>
-          <li>
-            Vizualization of actual recycling material being consumed
-          </li>
-          <li>
-            S7.net wrapper for reading direct info from PLC
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Acceleration of operator decision-making, reduction of the possibility of material substitution</em>
-      </p>
-    </div>
-        <div class="project">
-      <strong>Q-slides</strong><br>
-      <em>C# .Net, SQL, OPC Server</em>
-      <p>
-        <ul>
-          <li>
-            Vizualization of zones to check for quality workers
-          </li>
-          <li>
-            Loading of images from database (could be changed based on latest claims)
-          </li>
-          <li>
-            Zone was changing based on parts being produced in real time
-          </li>
-          <li>
-            During stopage (breakdown, break) was used to show operators info from company etc.
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Reduction of claims by 40%</em>
-      </p>
-    </div>
-        <div class="project">
-      <strong>LineSpy</strong><br>
-      <em>C#.net, Visual studio, OPC Server</em>
-      <p>
-        <ul>
-          <li>
-            Graphed actual and past info about production line (produced parts, speed of production etc.)
-          </li>
-          <li>
-            Monitored cell by cell with possibility to check for bottleneck
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Reduced needed optimalization time by 70%</em>
-      </p>
-    </div>
-        <div class="project">
-      <strong>Process Control Tool</strong><br>
-      <em>Visual studio, C#.net, SQL, Microsoft SQL Management studio,
-          KepServer (Dataloger), PdfSharp (to fill PDF form with
-          parameters for printing), hashing of password to secure
-          password in hash form in database</em>
-      <p>
-        <ul>
-          <li>
-            Reading of actual values of parameters on production line and saving them in databse
-          </li>
-          <li>
-            User management in application (User, Engineer etc.) to authorize changes
-          </li>
-          <li>
-            Browsing and comparing changes from past
-          </li>
-          <li>
-            Change management of saved parameters
-          </li>
-          <li>
-            Email notifications informing about changes in parameters             
-          </li>
-          <li>
-            Exporting production parameters to PDF directly from application
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Eliminated the need to write down parameters on paper and improved traceability of changes</em>
-      </p>
-    </div>
-            <div class="project">
-      <strong>Process control tool – Notify center</strong><br>
-      <em>C#.net, Visual studio, SQL</em>
-      <p>
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <div class="card section">
+          <h3>Maintenance Logs <span class="badge">C# · .NET · SQL</span></h3>
+          <div class="meta">Team work overview, NC tracking, supplier follow-up.</div>
           <ul>
-          <li>
-            Windows service for sending email noifications inside organization informing about pending tasks
-          </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Reduced response time to take action by 70%</em>
-      </p>
-    </div>
-        <div class="project">
-      <strong>SmartHome</strong><br>
-      <em>ModeBus, NodeRed, InfluxDb, Grafana, Windows server, Arduino
-      programming, ESP programming, PCB desing, MQTT</em>
-      <p>
-        <ul>
-        <li>
-          Integrated system to automate household
-        </li>
-        <li>
-           Light & blinds control based on sun position
-        </li>
-        <li>
-          Heating control based on presence of people in house
-        </li>
-        <li>
-          History diagram of usage of electricity, water and gas
-        </li>
-        </ul>
-      </p>
-      <p>
-        Impact: <em>Reduced electricity consumption by 25%, reduced gas consumption by 30%</em>
-      </p>
-    </div>
-  </section>
+            <li>Unified logging of nonconformities and actions.</li>
+            <li><strong>Impact:</strong> introduced <em>traceability</em> of claims across suppliers.</li>
+          </ul>
+          <!-- <a href="https://github.com/argenlo21/maintenance-logs">GitHub</a> · <a href="img/maint1.png">Screenshot</a> -->
+        </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: tkacikto@gmail.com.com | <a href="https://github.com/argenlo21">GitHub</a></p>
-  </section>
+        <div class="card section">
+          <h3>Part Counter <span class="badge">C# · KepServer · SQL</span></h3>
+          <div class="meta">OPC readout from PLC, live takt time & upcoming change.</div>
+          <ul>
+            <li>Shopfloor visualization without dedicated HMI hardware.</li>
+            <li><strong>Impact:</strong> better information flow on the shopfloor.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Overwatch <span class="badge">C# · S7.Net</span></h3>
+          <div class="meta">Direct S7 register read; live material consumption.</div>
+          <ul>
+            <li>Bypassed OPC where not available; lightweight UI for operators.</li>
+            <li><strong>Impact:</strong> faster decisions, lower risk of material substitution.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Q-slides <span class="badge">C# · SQL · OPC</span></h3>
+          <div class="meta">Quality zones & dynamic content based on parts produced.</div>
+          <ul>
+            <li>Real-time zone switching; images loaded from DB.</li>
+            <li><strong>Impact:</strong> reduced claims by ~40%.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>LineSpy <span class="badge">C# · OPC</span></h3>
+          <div class="meta">Line status overview, hourly charts, bottleneck search.</div>
+          <ul>
+            <li><strong>Impact:</strong> optimization time reduced by ~70%.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Process Control Tool + Notify Center <span class="badge">C# · SQL · PdfSharp</span></h3>
+          <div class="meta">Audit and approval of parameter changes; PDF exports; email notifications.</div>
+          <ul>
+            <li>User roles (Operator/Engineer), change browsing & comparison.</li>
+            <li><strong>Impact:</strong> paperless parameters, strong change traceability; response time −70%.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>SmartHome <span class="badge">Modbus · Node-RED · InfluxDB/Grafana · ESP</span></h3>
+          <div class="meta">Lights, blinds, heating; energy telemetry; custom PCBs.</div>
+          <ul>
+            <li><strong>Impact:</strong> electricity −25%, gas −30%.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:tkacikto@gmail.com">tkacikto@gmail.com</a> ·
+        <a href="https://github.com/argenlo21" rel="noopener">GitHub</a> ·
+      </p>
+      <p><strong>Open to:</strong> PLC/MES projects and .NET integration tools (B2B/TPP).</p>
+    </section>
+  </main>
+
+  <footer style="text-align:center; padding:18px; color:#6b7280; font-size:.9rem;">
+    © Tomáš Tkáčik
+  </footer>
 </body>
 </html>
-
-
-
