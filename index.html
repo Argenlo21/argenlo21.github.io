@@ -32,56 +32,90 @@
       <p>
         <ul>
           <li>
-            maintain overlook of team work on site
+            Maintain overlook of team work on site
           </li>
           <li>
-            input nonconformity found on equipment and machines
+            Input nonconformity found on equipment and machines
           </li>
           <li>
-            keep track with suppliers if these nonconformity was resolved
+            Keep track with suppliers if these nonconformity was resolved
           </li>
         </ul>
-    </p>
+      </p>
+      <p>
+        Impact: <em>Introduced tracability of claims</em>
+      </p>
     </div>
     <div class="project">
       <strong>Part Counter</strong><br>
       <em>C# .net, Kepserver, SQL Server</em>
-      <p>After maintenance moved some screens on line that displayed
-        this information, logistic workers didn’t have access to
-        information when next change of production will be made. I was
-        asked if it is possible to read this information from PLC and
-        display it on standard PC screen. This was my first simple
-        application that worked with OPC server.</p>
+      <p>
+        <ul>
+          <li>
+            Vizualization of production status on lines
+          </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Increased information flow on shopflor</em>
+      </p>
     </div>
     <div class="project">
       <strong>Overwatch</strong><br>
       <em>Visual studio, S7.net wrapper, c# .net, GIMP (for design of icons etc.)</em>
-      <p>Need for new application rose when plant workers didn’t have
-          actual information about what material they are going to process
-          next based on the conveyor system that was coming from the
-          previous plant (waste processing). Without the possibility to use
-          OPC server a s7.net wrapper was used to obtain information
-          directly from registers of Siemens PLC and it was used to display
-          information on screen for the workers to know what kind of
-          material is being processed. It helped the company to be more efficient.</p>
+      <p>
+        <ul>
+          <li>
+            Vizualization of actual recycling material being consumed
+          </li>
+          <li>
+            S7.net wrapper for reading direct info from PLC
+          </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Acceleration of operator decision-making, reduction of the possibility of material substitution</em>
+      </p>
     </div>
         <div class="project">
       <strong>Q-slides</strong><br>
       <em>C# .Net, SQL, OPC Server</em>
-      <p>Small application that read out more data from OPC server.
-        When production batch changed to new reference, application
-        automatically looked for images corresponding to that reference
-        and displayed the first image. Then during each part produced
-        by the line, this image changed to the next. It cycled through
-        images of zonal control, quality alerts etc.</p>
+      <p>
+        <ul>
+          <li>
+            Vizualization of zones to check for quality workers
+          </li>
+          <li>
+            Loading of images from database (could be changed based on latest claims)
+          </li>
+          <li>
+            Zone was changing based on parts being produced in real time
+          </li>
+          <li>
+            During stopage (breakdown, break) was used to show operators info from company etc.
+          </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Reduction of claims by 40%</em>
+      </p>
     </div>
         <div class="project">
       <strong>LineSpy</strong><br>
       <em>C#.net, Visual studio, OPC Server</em>
-      <p>Small visual application that displayed information about current
-          and past status of all production lines in plant. It graphed the
-          speed of production for last hour of each line, showed the
-          current producing batch etc.</p>
+      <p>
+        <ul>
+          <li>
+            Graphed actual and past info about production line (produced parts, speed of production etc.)
+          </li>
+          <li>
+            Monitored cell by cell with possibility to check for bottleneck
+          </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Reduced needed optimalization time by 70%</em>
+      </p>
     </div>
         <div class="project">
       <strong>Process Control Tool</strong><br>
@@ -89,45 +123,78 @@
           KepServer (Dataloger), PdfSharp (to fill PDF form with
           parameters for printing), hashing of password to secure
           password in hash form in database</em>
-      <p>Application that used OPC server (KepServer Datalogger) to
-        store all parameters of whole lines during “save of parameters”
-        operation to SQL database. The whole application uses login with
-        password verification to permit access only to authorized
-        personal to accept or reject new changes to the parameters
-        done on the press line. User with operator status is capable only
-        to add comment to the changes made by him with parameters
-        and view (or print in PDF) master copy of approved parameters.
-        Engineering can also access history of changes to parameters
-        (for audit purpose) and is also capable to track process
-        parameters during each production (like press force for
-        example).</p>
+      <p>
+        <ul>
+          <li>
+            Reading of actual values of parameters on production line and saving them in databse
+          </li>
+          <li>
+            User management in application (User, Engineer etc.) to authorize changes
+          </li>
+          <li>
+            Browsing and comparing changes from past
+          </li>
+          <li>
+            Change management of saved parameters
+          </li>
+          <li>
+            Email notifications informing about changes in parameters             
+          </li>
+          <li>
+            Exporting production parameters to PDF directly from application
+          </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Eliminated the need to write down parameters on paper and improved traceability of changes</em>
+      </p>
     </div>
             <div class="project">
       <strong>Process control tool – Notify center</strong><br>
       <em>C#.net, Visual studio, SQL</em>
-      <p>Small windows service to send email report on daily basis with
-        information about database status to responsible team
-        (parameters waiting for approval etc.)</p>
+      <p>
+          <ul>
+          <li>
+            Windows service for sending email noifications inside organization informing about pending tasks
+          </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Reduced response time to take action by 70%</em>
+      </p>
     </div>
         <div class="project">
       <strong>SmartHome</strong><br>
       <em>ModeBus, NodeRed, InfluxDb, Grafana, Windows server, Arduino
       programming, ESP programming, PCB desing, MQTT</em>
-      <p>Integrating and automatizating processes in household to
-      smart home ecosystem. From light control, blinds control based
-      on sun orientation and position, to heating control based on
-      presence of people in house to energy management, water
-      usage etc.</p>
+      <p>
+        <ul>
+        <li>
+          Integrated system to automate household
+        </li>
+        <li>
+           Light & blinds control based on sun position
+        </li>
+        <li>
+          Heating control based on presence of people in house
+        </li>
+        <li>
+          History diagram of usage of electricity, water and gas
+        </li>
+        </ul>
+      </p>
+      <p>
+        Impact: <em>Reduced electricity consumption by 25%, reduced gas consumption by 30%</em>
+      </p>
     </div>
   </section>
 
   <section>
     <h2>Contact</h2>
-    <p>Email: tkacikto@gmail.com.com | <a href="https://linkedin.com/in/tomas">LinkedIn</a> | <a href="https://github.com/tomas">GitHub</a></p>
+    <p>Email: tkacikto@gmail.com.com | <a href="https://github.com/argenlo21">GitHub</a></p>
   </section>
 </body>
 </html>
-
 
 
 
