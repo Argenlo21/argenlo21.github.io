@@ -47,8 +47,14 @@
       <p><strong>Focus:</strong> C#/.NET, SQL Server, OPC (KepServer), S7 communication, dashboards, reporting.</p>
     </section>
 
+  <div style="text-align:center; margin-bottom:20px;">
+    <button onclick="showSection('software')" style="padding:8px 16px; margin-right:10px;">Software</button>
+    <button onclick="showSection('automation')" style="padding:8px 16px;">Automation</button>
+  </div>
+
+  <div id="software" class="project-section">
     <section>
-      <h2>Projects</h2>
+      <h2>Software projects</h2>
       <div class="grid">
 
         <div class="card section">
@@ -58,7 +64,15 @@
             <li>Unified logging of nonconformities and actions.</li>
             <li><strong>Impact:</strong> introduced <em>traceability</em> of claims across suppliers.</li>
           </ul>
-          <!-- <a href="https://github.com/argenlo21/maintenance-logs">GitHub</a> · <a href="img/maint1.png">Screenshot</a> -->
+        </div>
+
+        <div class="card section">
+          <h3>Plant monitoring <span class="badge">C# · .NET · SQL · Ignition</span></h3>
+          <div class="meta">Scada monitoring of production plant.</div>
+          <ul>
+            <li>Visualization of plant status with alarm screens</li>
+            <li><strong>Impact:</strong> reduced reaction time of plant workers to downtime.</li>
+          </ul>
         </div>
 
         <div class="card section">
@@ -115,6 +129,69 @@
 
       </div>
     </section>
+</div>
+
+  <div id="automation" class="project-section">
+    <section>
+      <h2>Automation projects</h2>
+      <div class="grid">
+
+        <div class="card section">
+          <h3>Endpacking<span class="badge">Simatic 1200</span></h3>
+          <div class="meta">Change frequency drivers communication</div>
+          <ul>
+            <li>Created visualization for operators & maintenance.</li>
+            <li><strong>Impact:</strong> line downtime -30%</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Sinamics retrofit<span class="badge">Sinamics S120 & Simatic 300</span></h3>
+          <div class="meta">Retrofit of old servo drives for Sinamics & change PLC logic</div>
+          <ul>
+            <li>Conveyor belt system with 3 conveyors for precision movement of parts.</li>
+            <li><strong>Impact:</strong> Line downtime -40%</li>
+          </ul>
+        </div>
+       
+        <div class="card section">
+          <h3>Double silo feeder<span class="badge">Simatic 1200</span></h3>
+          <div class="meta">Automated double silo feeding to screw conveyor & packing unit</div>
+          <ul>
+            <li>Explosion hazard environment.</li>
+            <li><strong>Impact:</strong> Reduced need to operate silo management</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Retention ring detection<span class="badge">Keyence IV4</span></h3>
+          <div class="meta">Implemented AI camera for press to detect missing retention ring presence</div>
+          <ul>
+            <li><strong>Impact:</strong> NOK parts -70%</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Blind detection<span class="badge">Simatic 1200</span></h3>
+          <div class="meta">Implemented sensors and AI cameras on 6 stations on production line.</div>
+          <ul>
+            <li>Detection of blanking plugs for car air conditioning unit production line to prevent screw from falling inside.</li>
+            <li><strong>Impact:</strong> Claims -25%</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Thermal camera detection<span class="badge">Simatic 1500</span></h3>
+          <div class="meta">Implemented 4 thermal cameras to detect battery temperature before installation to EV</div>
+          <ul>
+            <li>System with alarm for logistic operators and connection to fire department</li>
+            <li><strong>Impact:</strong> Decreased fire hazard during final assembly</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+</div>
 
     <section class="contact">
       <h2>Contact</h2>
@@ -129,5 +206,12 @@
   <footer style="text-align:center; padding:18px; color:#6b7280; font-size:.9rem;">
     © Tomáš Tkáčik
   </footer>
+
+<script>
+  function showSection(section) {
+    document.getElementById('software').style.display = (section === 'software') ? 'block' : 'none';
+    document.getElementById('automation').style.display = (section === 'automation') ? 'block' : 'none';
+  }
+</script>
 </body>
 </html>
