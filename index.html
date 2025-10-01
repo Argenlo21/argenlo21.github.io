@@ -49,7 +49,7 @@
 .section{scroll-margin-top:calc(var(--nav-h)+18px);padding:64px 16px}
 .container{max-width:var(--maxw);margin:0 auto}
 
-.badge { display:inline-block; font-size:.8rem; background:#eef2ff; padding:2px 8px; border-radius:999px; margin-left:6px; }
+.badge { display:inline-block; font-size:.8rem; background:#0b422e; padding:2px 8px; border-radius:999px; margin-left:6px; }
 .hero{padding:84px 16px 32px}
 .hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
 .hero-card{background:linear-gradient(180deg,rgba(16,185,129,.18),rgba(16,185,129,.08));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
@@ -104,7 +104,7 @@
     <div class="container">
       <div class="hero-card">
         <h1>Backend & Automation Engineer</h1>
-        <p>Spájam PLC/OPC reálne dáta s webom a SQL. Efektívne nástroje, merateľné prínosy.</p>
+        <p>My focus isn't only on delivering results, but also on the value they create for you.</p>
       </div>
       <div class="hero-card">
         <h2 style="margin:0 0 10px">My focus:</h2>
@@ -126,16 +126,84 @@
     <div class="container">
       <h2 style="margin:0 0 16px">Software projekty</h2>
       <div class="split">
+        
         <article class="card">
-          <h3>Finance Advisor CRM + Notify</h3>
-          <p>React + ASP.NET Core; plánovanie schôdzok, exporty PDF, notifikácie e‑mailom.</p>
-          <span class="tag">React • ASP.NET • SQL</span>
+          <h3>Finance management<span class="badge">ASP · .NET · React</span></h3>
+          <div class="meta">Clients overview, meetings planning, portfolio management</div>
+          <ul>
+            <li>Finance advisors client management system with meetings planning calendar.</li>
+            <li><strong>Impact:</strong> Increased <em>time management</em> of finance advisors.</li>
+          </ul>
         </article>
+        
         <article class="card">
           <h3>Data Sync Service</h3>
           <p>Windows Service na ETL medzi OPC UA a SQL s retry logikou a alertami.</p>
           <span class="tag">C# • OPC UA • Serilog</span>
         </article>
+
+        <article class="card">
+          <h3>Process Control Tool + Notify Center <span class="badge">C# · SQL · ASP · React</span></h3>
+          <div class="meta">Audit and approval of parameter changes in production; PDF exports; email notifications.</div>
+          <ul>
+            <li>User roles (Operator/Engineer), change browsing & comparison.</li>
+            <li><strong>Impact:</strong> paperless parameters, strong change traceability; response time −70%.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Maintenance Logs <span class="badge">C# · .NET · SQL</span></h3>
+          <div class="meta">Team work overview, NC tracking, supplier follow-up.</div>
+          <ul>
+            <li>Unified logging of nonconformities and actions.</li>
+            <li><strong>Impact:</strong> introduced <em>traceability</em> of claims across suppliers.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Plant monitoring <span class="badge">C# · .NET · SQL · Ignition</span></h3>
+          <div class="meta">Scada monitoring of production plant.</div>
+          <ul>
+            <li>Visualization of plant status with alarm screens</li>
+            <li><strong>Impact:</strong> reduced reaction time of plant workers to downtime.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Part Counter <span class="badge">C# · KepServer · SQL</span></h3>
+          <div class="meta">OPC readout from PLC, live takt time & upcoming change.</div>
+          <ul>
+            <li>Shopfloor visualization without dedicated HMI hardware.</li>
+            <li><strong>Impact:</strong> better information flow on the shopfloor.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Overwatch <span class="badge">C# · S7.Net</span></h3>
+          <div class="meta">Direct S7 register read; live material consumption.</div>
+          <ul>
+            <li>Bypassed OPC where not available; lightweight UI for operators.</li>
+            <li><strong>Impact:</strong> faster decisions, lower risk of material substitution.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Q-slides <span class="badge">C# · SQL · OPC</span></h3>
+          <div class="meta">Quality zones & dynamic content based on parts produced.</div>
+          <ul>
+            <li>Real-time zone switching; images loaded from DB.</li>
+            <li><strong>Impact:</strong> reduced claims by ~40%.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>LineSpy <span class="badge">C# · OPC</span></h3>
+          <div class="meta">Line status overview, hourly charts, bottleneck search.</div>
+          <ul>
+            <li><strong>Impact:</strong> optimization time reduced by ~70%.</li>
+          </ul>
+        </article>
+        
       </div>
     </div>
   </section> <!-- ====== AUTOMATION ====== --> <section class="section" id="automation">
@@ -242,6 +310,7 @@
     window.addEventListener('load', spy);
   </script></body>
 </html>
+
 
 
 
