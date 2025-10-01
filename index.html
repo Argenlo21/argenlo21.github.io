@@ -1,74 +1,198 @@
 <!doctype html>
-<html lang="en">
+
+<html lang="sk">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio – Tomáš Tkáčik | PLC/MES & .NET</title>
-  <meta name="description" content="PLC & MES engineer and .NET developer. I connect production lines with SQL/SCADA and build internal tools with measurable impact." />
-  <title>Sidebar Navigation</title>
+  <title>Tomáš Tkáčik – Portfolio</title>
+  <meta name="description" content="Single-page portfolio: About, Software, Automation, Contact." />
   <style>
-    body {margin: 0; font-family: Arial, sans-serif; display: flex;}
+    :root{
+      --bg:#0b1f1a; /* dark greenish */
+      --panel:#0f2d24; /* slightly lighter */
+      --card:#10b9811a; /* translucent accent */
+      --text:#e6f6ef; /* near-white */
+      --muted:#a8b9b2; /* muted text */
+      --accent:#10b981; /* emerald */
+      --accent-2:#34d399; /* lighter emerald */
+      --border:#1f3b32;      
+      --maxw:1100px;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --nav-h:64px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#062019);color:var(--text);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto}/* ====== NAVBAR ====== */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);background:rgba(11,31,26,.7);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;gap:16px;max-width:var(--maxw);margin:0 auto;height:var(--nav-h);padding:0 16px}
+.brand{font-weight:700;letter-spacing:.3px}
+.spacer{flex:1}
+.links{display:flex;gap:8px}
+.links a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid transparent}
+.links a:hover{background:var(--card);border-color:var(--border)}
+.links a.active{background:var(--accent);color:#052016}
 
-    /* Sidebar */
-    .sidebar {width: 200px; background: #222; color: #fff; height: 100vh; position: fixed; top: 0; left: 0; padding-top: 20px;}
-    .sidebar a {display: block;color: #fff;padding: 12px 20px;text-decoration: none;transition: background 0.3s;}
-    .sidebar a:hover {background: #444;}
-    .content {margin-left: 200px; padding: 20px;flex: 1;}
-  </style>
- <style>
-    :root { --w: 920px; }
-    body { font-family: system-ui, Arial, sans-serif; margin:0; background:#014224; color:#030f0f; line-height:1.55;}
-    .glow-cursor {position: fixed; top: 0; left: 0; width: 30px; height: 30px; border-radius: 50%; pointer-events: none; background: rgba(0, 200, 255, 0.1); box-shadow: 0 0 60px 30px rgba(0, 200, 255, 0.15); transform: translate(-50%, -50%); transition: transform 0.05s linear;}
-    header h1 { margin:0 0 6px; font-size:2rem; }
-    header p { margin:0; color:#030f0f; }
-    main { max-width:var(--w); margin:0 auto; padding:0 20px 56px; }
-    section { background:#00df82; border-radius:14px; padding:22px; margin:16px 0; box-shadow:0 6px 18px rgba(0,0,0,.06); }
-    h2 { margin:0 0 12px; font-size:1.25rem; }
-    .grid { display: flex; 
-    flex-direction: column; 
-    gap: 12px;  }
-    @media (min-width: 820px) { .grid { grid-template-columns:1fr 1fr; } }
-    .card h3 { margin:0 0 6px; font-size:1.05rem; }
-    .meta { font-size:.9rem; color:#030f0f; margin-bottom:6px; }
-    ul { margin:8px 0 0 18px; }
-    a { color:#2563eb; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .contact a { margin-right:14px; }
-    .badge { display:inline-block; font-size:.8rem; background:#eef2ff; padding:2px 8px; border-radius:999px; margin-left:6px; }
-    .top-cta { margin-top:8px; }
-    button { border:0; border-radius:10px; padding:10px 14px; box-shadow:0 2px 8px rgba(0,0,0,.08); }
+/* Hamburger */
+.menu-btn{display:none;border:1px solid var(--border);background:transparent;color:var(--text);padding:8px 10px;border-radius:10px}
+.menu-btn:active{transform:scale(.98)}
+
+/* Mobile menu panel */
+.mobile{display:none}
+.mobile.open{display:block;border-top:1px solid var(--border);background:rgba(11,31,26,.96)}
+.mobile a{display:block;padding:14px 18px;border-bottom:1px solid var(--border)}
+.mobile a.active{background:var(--accent);color:#052016}
+
+/* ====== LAYOUT ====== */
+.section{scroll-margin-top:calc(var(--nav-h)+18px);padding:64px 16px}
+.container{max-width:var(--maxw);margin:0 auto}
+
+.hero{padding:84px 16px 32px}
+.hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+.hero-card{background:linear-gradient(180deg,rgba(16,185,129,.18),rgba(16,185,129,.08));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+.hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,42px)}
+.hero p{margin:0;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{grid-column:span 12;background:linear-gradient(180deg,#0f2d24,#0d2620);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 6px}
+.tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;background:var(--card);border:1px solid var(--border);font-size:12px;color:var(--muted)}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+.footer{padding:40px 16px;border-top:1px solid var(--border);color:var(--muted)}
+
+/* Responsive */
+@media (max-width:920px){
+  .hero .container{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .links{display:none}
+  .menu-btn{display:inline-flex}
+  .section{padding:56px 14px}
+}
+
   </style>
 </head>
 <body>
-   <div class="glow-cursor"></div>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>Content</h2>
-    <a href="aboutme.html">About me</a>
-    <a href="softprojects.html">Software</a>
-    <a href="autprojects.html">Automation</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="nav" aria-label="Hlavná navigácia">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Tomáš Tkáčik</a>
+      <div class="spacer"></div>
+      <div class="links" id="desktopLinks">
+        <a href="#about">About</a>
+        <a href="#software">Software</a>
+        <a href="#automation">Automation</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+        ☰
+      </button>
+    </div>
+    <div class="mobile" id="mobileMenu" role="menu">
+      <a href="#about" role="menuitem">About</a>
+      <a href="#software" role="menuitem">Software</a>
+      <a href="#automation" role="menuitem">Automation</a>
+      <a href="#contact" role="menuitem">Contact</a>
+    </div>
+  </nav> <!-- ====== HERO ====== --> <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-card">
+        <h1>Backend & Automation Engineer</h1>
+        <p>Spájam PLC/OPC reálne dáta s webom a SQL. Efektívne nástroje, merateľné prínosy.</p>
+      </div>
+      <div class="hero-card">
+        <h2 style="margin:0 0 10px">Rýchle odkazy</h2>
+        <p class="tag">#C# • ASP.NET • React • SQL • TIA • S7‑1500 • Ignition • Cimplicity</p>
+        <p class="tag">Remote/Hybrid • SR/EU</p>
+      </div>
+    </div>
+  </header> <!-- ====== ABOUT ====== --> <section class="section" id="about">
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <h2>About me</h2>
+          <p>Senior PLC/SCADA vývojár so skúsenosťami s integráciou do podnikových systémov. Budujem udržateľné riešenia s dôrazom na jednoduchosť a diagnostiku.</p>
+        </article>
+      </div>
+    </div>
+  </section> <!-- ====== SOFTWARE ====== --> <section class="section" id="software">
+    <div class="container">
+      <h2 style="margin:0 0 16px">Software projekty</h2>
+      <div class="split">
+        <article class="card">
+          <h3>Finance Advisor CRM + Notify</h3>
+          <p>React + ASP.NET Core; plánovanie schôdzok, exporty PDF, notifikácie e‑mailom.</p>
+          <span class="tag">React • ASP.NET • SQL</span>
+        </article>
+        <article class="card">
+          <h3>Data Sync Service</h3>
+          <p>Windows Service na ETL medzi OPC UA a SQL s retry logikou a alertami.</p>
+          <span class="tag">C# • OPC UA • Serilog</span>
+        </article>
+      </div>
+    </div>
+  </section> <!-- ====== AUTOMATION ====== --> <section class="section" id="automation">
+    <div class="container">
+      <h2 style="margin:0 0 16px">Automation projekty</h2>
+      <div class="split">
+        <article class="card">
+          <h3>Tandem Press Line – OEE</h3>
+          <p>Zber časov, dôvodov prestojov a kvality, reporty pre vedenie.</p>
+          <span class="tag">S7‑1500 • WinCC • SQL</span>
+        </article>
+        <article class="card">
+          <h3>Traceability Hub</h3>
+          <p>Jednotné API pre prístup k dátam z viacerých PLC a skenerov.</p>
+          <span class="tag">Ignition • REST • MSSQL</span>
+        </article>
+      </div>
+    </div>
+  </section> <!-- ====== CONTACT ====== --> <section class="section" id="contact">
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <h2>Kontakt</h2>
+          <p>E‑mail: <a href="mailto:tkacik.dev@gmail.com">tkacik.dev@gmail.com</a><br/>
+          GitHub: <a href="https://github.com/argenlo21" target="_blank" rel="noopener">@argenlo21</a></p>
+        </article>
+      </div>
+    </div>
+  </section> <footer class="footer">
+    <div class="container">© <span id="year"></span> Tomáš Tkáčik</div>
+  </footer> <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  <main>
-    <section>
-      <h2>About me</h2>
-      <p>Backend and integration specialist with experience connecting real-time control systems (PLC/OPC) to enterprise data layers (SQL/SCADA). 
-        I design efficient, maintainable tools with an emphasis on measurable business outcomes.</p>
-      <p><strong>Focus:</strong> <span class="badge">C#/.NET · ASP.Net · React · SQL · OPC · S7 communication<span></span></p>
-    </section>
+    // mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 
-  </main>
-
-  <footer style="text-align:center; padding:18px; color:#6b7280; font-size:.9rem;">
-    © Tomáš Tkáčik
-  </footer>
-
-<script>
-  function showSection(section) {
-    document.getElementById('software').style.display = (section === 'software') ? 'block' : 'none';
-    document.getElementById('automation').style.display = (section === 'automation') ? 'block' : 'none';
-  }
-</script>
-</body>
+    // scrollspy (active link highlight)
+    const sections = Array.from(document.querySelectorAll('section.section'));
+    const anchors = Array.from(document.querySelectorAll('.links a, .mobile a'));
+    const spy = () => {
+      let current = sections[0].id;
+      const y = window.scrollY + (window.innerHeight * 0.25) + 1; // bias
+      for(const sec of sections){
+        const top = sec.offsetTop;
+        if(y >= top) current = sec.id;
+      }
+      anchors.forEach(a=>{
+        if(a.getAttribute('href') === '#' + current) a.classList.add('active');
+        else a.classList.remove('active');
+      });
+    };
+    document.addEventListener('scroll', spy, {passive:true});
+    window.addEventListener('load', spy);
+  </script></body>
 </html>
