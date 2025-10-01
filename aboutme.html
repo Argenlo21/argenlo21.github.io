@@ -5,21 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio – Tomáš Tkáčik | PLC/MES & .NET</title>
   <meta name="description" content="PLC & MES engineer and .NET developer. I connect production lines with SQL/SCADA and build internal tools with measurable impact." />
+  <title>Sidebar Navigation</title>
   <style>
+    body {margin: 0; font-family: Arial, sans-serif; display: flex;}
+
+    /* Sidebar */
+    .sidebar {width: 200px; background: #222; color: #fff; height: 100vh; position: fixed; top: 0; left: 0; padding-top: 20px;}
+    .sidebar a {display: block;color: #fff;padding: 12px 20px;text-decoration: none;transition: background 0.3s;}
+    .sidebar a:hover {background: #444;}
+    .content {margin-left: 200px; padding: 20px;flex: 1;}
+  </style>
+ <style>
     :root { --w: 920px; }
-    body { font-family: system-ui, Arial, sans-serif; margin:0; background:#f6f7f9; color:#111827; line-height:1.55; }
-    header { text-align:center; padding:56px 20px 24px; }
+    body { font-family: system-ui, Arial, sans-serif; margin:0; background:#014224; color:#030f0f; line-height:1.55;}
+    .glow-cursor {position: fixed; top: 0; left: 0; width: 30px; height: 30px; border-radius: 50%; pointer-events: none; background: rgba(0, 200, 255, 0.1); box-shadow: 0 0 60px 30px rgba(0, 200, 255, 0.15); transform: translate(-50%, -50%); transition: transform 0.05s linear;}
     header h1 { margin:0 0 6px; font-size:2rem; }
-    header p { margin:0; color:#4b5563; }
+    header p { margin:0; color:#030f0f; }
     main { max-width:var(--w); margin:0 auto; padding:0 20px 56px; }
-    section { background:#fff; border-radius:14px; padding:22px; margin:16px 0; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+    section { background:#00df82; border-radius:14px; padding:22px; margin:16px 0; box-shadow:0 6px 18px rgba(0,0,0,.06); }
     h2 { margin:0 0 12px; font-size:1.25rem; }
     .grid { display: flex; 
     flex-direction: column; 
     gap: 12px;  }
     @media (min-width: 820px) { .grid { grid-template-columns:1fr 1fr; } }
     .card h3 { margin:0 0 6px; font-size:1.05rem; }
-    .meta { font-size:.9rem; color:#6b7280; margin-bottom:6px; }
+    .meta { font-size:.9rem; color:#030f0f; margin-bottom:6px; }
     ul { margin:8px 0 0 18px; }
     a { color:#2563eb; text-decoration:none; }
     a:hover { text-decoration:underline; }
@@ -30,14 +40,15 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tomáš Tkáčik</h1>
-    <p>PLC & MES Engineer · .NET Developer</p>
-    <div class="top-cta">
-      <a href="mailto:tkacikto@gmail.com"><button>Contact me</button></a>
-      <!-- <a href="cv_Tomas_Tkacik.pdf"><button>Download CV</button></a> -->
-    </div>
-  </header>
+   <div class="glow-cursor"></div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Content</h2>
+    <a href="aboutme.html">About me</a>
+    <a href="softprojects.html">Software</a>
+    <a href="autprojects.html">Automation</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
   <main>
     <section>
