@@ -1,87 +1,114 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tomáš Tkáčik – Portfolio</title>
-  <meta name="description" content="Single-page portfolio: About, Software, Automation, Contact." />
+  <title>Tomáš Tkáčik – Backend & Automation Engineer</title>
+  <meta name="description" content="Software + Industrial automation: .NET, React, SQL, OPC, TIA Portal. Portfolio with About, Software, Automation, Contact." />
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:title" content="Tomáš Tkáčik – Backend & Automation Engineer">
+  <meta property="og:description" content="Software + Industrial automation: .NET, React, SQL, OPC, TIA Portal.">
+  <meta property="og:type" content="website">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#0b1f1a; /* dark greenish */
-      --panel:#0f2d24; /* slightly lighter */
-      --card:#10b9811a; /* translucent accent */
-      --text:#e6f6ef; /* near-white */
-      --muted:#a8b9b2; /* muted text */
-      --accent:#10b981; /* emerald */
-      --accent-2:#34d399; /* lighter emerald */
-      --border:#1f3b32;      
+      --bg:#0b1220;        /* slate-950 */
+      --panel:#0f172a;     /* slate-900 */
+      --card:#0ea5e91a;    /* cyan tint */
+      --text:#e5f3ff;      /* near-white */
+      --muted:#a7b3c6;     /* slate-400 */
+      --accent:#22d3ee;    /* cyan-400 */
+      --accent-2:#67e8f9;  /* cyan-300 */
+      --border:#1e293b;    /* slate-800 */
       --maxw:1100px;
       --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --shadow:0 10px 30px rgba(2,6,23,.45);
       --nav-h:64px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),#062019);color:var(--text);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,.12), transparent 60%),
+        radial-gradient(900px 500px at 120% 10%, rgba(103,232,249,.10), transparent 60%),
+        linear-gradient(180deg,var(--bg),#0a1020);
+      color:var(--text);
+      font:16px/1.6 "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell;
+    }
+    h1,h2,h3{font-family:"Space Grotesk", ui-sans-serif; letter-spacing:.2px}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto}/* ====== NAVBAR ====== */
-.nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);background:rgba(11,31,26,.7);border-bottom:1px solid var(--border)}
-.nav-inner{display:flex;align-items:center;gap:16px;max-width:var(--maxw);margin:0 auto;height:var(--nav-h);padding:0 16px}
-.brand{font-weight:700;letter-spacing:.3px}
-.spacer{flex:1}
-.links{display:flex;gap:8px}
-.links a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid transparent}
-.links a:hover{background:var(--card);border-color:var(--border)}
-.links a.active{background:var(--accent);color:#052016}
+    img{max-width:100%;height:auto}
 
-/* Hamburger */
-.menu-btn{display:none;border:1px solid var(--border);background:transparent;color:var(--text);padding:8px 10px;border-radius:10px}
-.menu-btn:active{transform:scale(.98)}
+    /* ====== NAVBAR ====== */
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(120%) blur(8px);background:rgba(10,16,32,.7);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;gap:16px;max-width:var(--maxw);margin:0 auto;height:var(--nav-h);padding:0 16px}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .spacer{flex:1}
+    .links{display:flex;gap:8px}
+    .links a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid transparent}
+    .links a:hover{background:var(--card);border-color:var(--border)}
+    .links a.active{background:var(--accent);color:#052016}
 
-/* Mobile menu panel */
-.mobile{display:none}
-.mobile.open{display:block;border-top:1px solid var(--border);background:rgba(11,31,26,.96)}
-.mobile a{display:block;padding:14px 18px;border-bottom:1px solid var(--border)}
-.mobile a.active{background:var(--accent);color:#052016}
+    /* Hamburger */
+    .menu-btn{display:none;border:1px solid var(--border);background:transparent;color:var(--text);padding:8px 10px;border-radius:10px}
+    .menu-btn:active{transform:scale(.98)}
 
-/* ====== LAYOUT ====== */
-.section{scroll-margin-top:calc(var(--nav-h)+18px);padding:64px 16px}
-.container{max-width:var(--maxw);margin:0 auto}
+    /* Mobile menu panel */
+    .mobile{display:none}
+    .mobile.open{display:block;border-top:1px solid var(--border);background:rgba(10,16,32,.96)}
+    .mobile a{display:block;padding:14px 18px;border-bottom:1px solid var(--border)}
+    .mobile a.active{background:var(--accent);color:#052016}
 
-.badge { display:inline-block; font-size:.8rem; background:#0b422e; padding:2px 8px; border-radius:999px; margin-left:6px; }
-.hero{padding:84px 16px 32px}
-.hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
-.hero-card{background:linear-gradient(180deg,rgba(16,185,129,.18),rgba(16,185,129,.08));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
-.hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,42px)}
-.hero p{margin:0;color:var(--muted)}
+    /* ====== LAYOUT ====== */
+    .section{scroll-margin-top:calc(var(--nav-h)+18px);padding:64px 16px}
+    .container{max-width:var(--maxw);margin:0 auto}
 
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-.card{grid-column:span 12;background:linear-gradient(180deg,#0f2d24,#0d2620);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
-.card h3{margin:0 0 6px}
-.tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;background:var(--card);border:1px solid var(--border);font-size:12px;color:var(--muted)}
+    .badge { display:inline-block; font-size:.8rem; background:#083344; color:#aef; padding:2px 8px; border-radius:999px; margin-left:6px; border:1px solid #164e63; }
+    .hero{padding:84px 16px 32px}
+    .hero .container{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .hero-card{background:linear-gradient(180deg, rgba(34,211,238,.16), rgba(34,211,238,.06));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,42px)}
+    .hero p{margin:0;color:var(--muted)}
 
-.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 12;background:linear-gradient(180deg,var(--panel),#0d152b);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:transform .2s ease, border-color .2s ease}
+    .card:hover{ transform:translateY(-2px); border-color:#233047 }
+    .card h3{margin:0 0 6px}
+    .meta{color:var(--muted); margin-bottom:8px}
+    .tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;background:var(--card);border:1px solid var(--border);font-size:12px;color:var(--muted)}
 
-.footer{padding:40px 16px;border-top:1px solid var(--border);color:var(--muted)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 
-/* Responsive */
-@media (max-width:920px){
-  .hero .container{grid-template-columns:1fr}
-  .split{grid-template-columns:1fr}
-}
-@media (max-width:720px){
-  .links{display:none}
-  .menu-btn{display:inline-flex}
-  .section{padding:56px 14px}
-}
+    .footer{padding:40px 16px;border-top:1px solid var(--border);color:var(--muted)}
 
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#0b2a33,#0a2230)}
+    .btn:hover{border-color:#2b3b55}
+
+    /* Responsive */
+    @media (max-width:920px){
+      .hero .container{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+    }
+    @media (max-width:720px){
+      .links{display:none}
+      .menu-btn{display:inline-flex}
+      .section{padding:56px 14px}
+    }
   </style>
-</head>
+
+  <!-- Analytics (kept) -->
   <script defer data-domain="tkacik.dev" src="https://plausible.io/js/script.js"></script>
+</head>
 <body>
   <!-- ====== NAVBAR ====== -->
-  <nav class="nav" aria-label="Hlavná navigácia">
+  <nav class="nav" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#top" class="brand">Tomáš Tkáčik</a>
       <div class="spacer"></div>
@@ -91,9 +118,7 @@
         <a href="#automation">Automation</a>
         <a href="#contact">Contact</a>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
-        ☰
-      </button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">☰</button>
     </div>
     <div class="mobile" id="mobileMenu" role="menu">
       <a href="#about" role="menuitem">About</a>
@@ -101,75 +126,83 @@
       <a href="#automation" role="menuitem">Automation</a>
       <a href="#contact" role="menuitem">Contact</a>
     </div>
-  </nav> <!-- ====== HERO ====== --> <header class="hero" id="top">
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero" id="top">
     <div class="container">
       <div class="hero-card">
         <h1>Backend & Automation Engineer</h1>
-        <p>My focus isn't only on delivering results, but also on the value they create for you.</p>
+        <p>I deliver systems that move metrics—reliably, measurably.</p>
+        <p class="tag">Remote/Hybrid • SK/EU</p>
       </div>
       <div class="hero-card">
-        <h2 style="margin:0 0 10px">My focus:</h2>
-        <p class="tag">C#/.NET · ASP.Net · React · SQL · OPC · S7 communication · Tia Portal</p>
-        <p class="tag">Remote/Hybrid • SR/EU</p>
+        <h2 style="margin:0 0 10px">Focus</h2>
+        <p class="tag">C#/.NET · ASP.NET · React · SQL · OPC · S7 communication · TIA Portal</p>
       </div>
     </div>
-  </header> <!-- ====== ABOUT ====== --> <section class="section" id="about">
+  </header>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="section" id="about">
     <div class="container">
       <div class="grid">
         <article class="card">
           <h2>About me</h2>
-          <p>Backend and integration specialist with experience connecting real-time control systems (PLC/OPC) to enterprise data layers (SQL/SCADA). 
-        I design efficient, maintainable tools with an emphasis on measurable business outcomes.</p>
+          <p>Backend and integration specialist connecting real‑time control systems (PLC/OPC) with enterprise data layers (SQL/SCADA). I design efficient, maintainable tools with an emphasis on measurable business outcomes.</p>
         </article>
       </div>
     </div>
-  </section> <!-- ====== SOFTWARE ====== --> <section class="section" id="software">
+  </section>
+
+  <!-- ====== SOFTWARE ====== -->
+  <section class="section" id="software">
     <div class="container">
       <h2 style="margin:0 0 16px">Software projects</h2>
       <div class="split">
 
         <article class="card">
           <h3>Project planning calculator<span class="badge">ASP · .NET · n8n</span></h3>
-          <div class="meta">Web app to speed up project cost calculation</div>
+          <div class="meta">Web app for faster, more accurate project cost estimates.</div>
           <ul>
-            <li>Linked to n8n for automation and AI integration</li>
+            <li>Linked to n8n for automation and AI integration.</li>
             <li><strong>Impact:</strong> Increased <em>accuracy</em> of cost estimation.</li>
-          </ul>
-        </article>
-        
-        <article class="card">
-          <h3>Finance management<span class="badge">ASP · .NET · React</span></h3>
-          <div class="meta">Clients overview, meetings planning, portfolio management</div>
-          <ul>
-            <li>Finance advisors client management system with meetings planning calendar.</li>
-            <li><strong>Impact:</strong> Increased <em>time management</em> of finance advisors.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Process Control Tool + Notify Center <span class="badge">C# · SQL · ASP · React</span></h3>
-          <div class="meta">Audit and approval of parameter changes in production; PDF exports; email notifications.</div>
+          <h3>Finance management<span class="badge">ASP · .NET · React</span></h3>
+          <div class="meta">Clients overview, meeting planning, portfolio management.</div>
+          <ul>
+            <li>Client management system with scheduling.</li>
+            <li><strong>Impact:</strong> Improved advisors’ time management.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Process Control Tool + Notify Center <span class="badge">C# · SQL · ASP.NET · React</span></h3>
+          <div class="meta">Audit/approval of parameter changes; PDF exports; email notifications.</div>
           <ul>
             <li>User roles (Operator/Engineer), change browsing & comparison.</li>
-            <li><strong>Impact:</strong> paperless parameters, strong change traceability; response time −70%.</li>
+            <li><strong>Impact:</strong> Paperless parameters, strong traceability; response time −70%.</li>
           </ul>
         </article>
 
         <article class="card">
           <h3>Maintenance Logs <span class="badge">C# · .NET · SQL</span></h3>
-          <div class="meta">Team work overview, NC tracking, supplier follow-up.</div>
+          <div class="meta">Team work overview, NC tracking, supplier follow‑up.</div>
           <ul>
             <li>Unified logging of nonconformities and actions.</li>
-            <li><strong>Impact:</strong> introduced <em>traceability</em> of claims across suppliers.</li>
+            <li><strong>Impact:</strong> Introduced <em>traceability</em> of claims across suppliers.</li>
           </ul>
         </article>
 
         <article class="card">
           <h3>Plant monitoring <span class="badge">C# · .NET · SQL · Ignition</span></h3>
-          <div class="meta">Scada monitoring of production plant.</div>
+          <div class="meta">SCADA monitoring of production plant.</div>
           <ul>
-            <li>Visualization of plant status with alarm screens</li>
-            <li><strong>Impact:</strong> reduced reaction time of plant workers to downtime.</li>
+            <li>Visualization of plant status with alarm screens.</li>
+            <li><strong>Impact:</strong> Reduced reaction time of plant workers to downtime.</li>
           </ul>
         </article>
 
@@ -178,7 +211,7 @@
           <div class="meta">OPC readout from PLC, live takt time & upcoming change.</div>
           <ul>
             <li>Shopfloor visualization without dedicated HMI hardware.</li>
-            <li><strong>Impact:</strong> better information flow on the shopfloor.</li>
+            <li><strong>Impact:</strong> Better information flow on the shopfloor.</li>
           </ul>
         </article>
 
@@ -187,16 +220,16 @@
           <div class="meta">Direct S7 register read; live material consumption.</div>
           <ul>
             <li>Bypassed OPC where not available; lightweight UI for operators.</li>
-            <li><strong>Impact:</strong> faster decisions, lower risk of material substitution.</li>
+            <li><strong>Impact:</strong> Faster decisions, lower risk of material substitution.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Q-slides <span class="badge">C# · SQL · OPC</span></h3>
+          <h3>Q‑slides <span class="badge">C# · SQL · OPC</span></h3>
           <div class="meta">Quality zones & dynamic content based on parts produced.</div>
           <ul>
-            <li>Real-time zone switching; images loaded from DB.</li>
-            <li><strong>Impact:</strong> reduced claims by ~40%.</li>
+            <li>Real‑time zone switching; images loaded from DB.</li>
+            <li><strong>Impact:</strong> Reduced claims by ~40%.</li>
           </ul>
         </article>
 
@@ -204,86 +237,98 @@
           <h3>LineSpy <span class="badge">C# · OPC</span></h3>
           <div class="meta">Line status overview, hourly charts, bottleneck search.</div>
           <ul>
-            <li><strong>Impact:</strong> optimization time reduced by ~70%.</li>
+            <li><strong>Impact:</strong> Optimization time reduced by ~70%.</li>
           </ul>
         </article>
-        
+
       </div>
     </div>
-  </section> <!-- ====== AUTOMATION ====== --> <section class="section" id="automation">
+  </section>
+
+  <!-- ====== AUTOMATION ====== -->
+  <section class="section" id="automation">
     <div class="container">
       <h2 style="margin:0 0 16px">Automation projects</h2>
       <div class="split">
-        
+
         <article class="card">
-          <h3>Endpacking<span class="badge">Simatic 1200</span></h3>
-          <div class="meta">Change frequency drivers communication</div>
+          <h3>Endpacking<span class="badge">SIMATIC S7‑1200</span></h3>
+          <div class="meta">VFD (frequency drive) communication changes & operator UI.</div>
           <ul>
             <li>Created visualization for operators & maintenance.</li>
-            <li><strong>Impact:</strong> line downtime -30%</li>
-          </ul>
-        </article>
-        
-        <article class="card">
-         <h3>Sinamics retrofit<span class="badge">Sinamics S120 & Simatic 300</span></h3>
-          <div class="meta">Retrofit of old servo drives for Sinamics & change PLC logic</div>
-          <ul>
-            <li>Conveyor belt system with 3 conveyors for precision movement of parts.</li>
-            <li><strong>Impact:</strong> Line downtime -40%</li>
+            <li><strong>Impact:</strong> Line downtime −30%.</li>
           </ul>
         </article>
 
         <article class="card">
-           <h3>Double silo feeder<span class="badge">Simatic 1200</span></h3>
-          <div class="meta">Automated double silo feeding to screw conveyor & packing unit</div>
+          <h3>Sinamics retrofit<span class="badge">SINAMICS S120 & SIMATIC S7‑300</span></h3>
+          <div class="meta">Retrofit of old servo drives to SINAMICS; PLC logic changes.</div>
           <ul>
-            <li>Explosion hazard environment.</li>
-            <li><strong>Impact:</strong> Reduced need to operate silo management</li>
+            <li>Conveyor system with 3 conveyors for precision movement of parts.</li>
+            <li><strong>Impact:</strong> Line downtime −40%.</li>
           </ul>
         </article>
 
         <article class="card">
-           <h3>Retention ring detection<span class="badge">Keyence IV4</span></h3>
-          <div class="meta">Implemented AI camera for press to detect missing retention ring presence</div>
+          <h3>Double silo feeder<span class="badge">SIMATIC S7‑1200</span></h3>
+          <div class="meta">Automated double‑silo feeding to screw conveyor & packing unit.</div>
           <ul>
-            <li><strong>Impact:</strong> NOK parts -70%</li>
+            <li>Explosion‑hazard environment.</li>
+            <li><strong>Impact:</strong> Reduced need for manual silo management.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Blind detection<span class="badge">Simatic 1200</span></h3>
-          <div class="meta">Implemented sensors and AI cameras on 6 stations on production line.</div>
+          <h3>Retention ring detection<span class="badge">Keyence IV4</span></h3>
+          <div class="meta">AI camera on press to detect missing retention ring presence.</div>
           <ul>
-            <li>Detection of blanking plugs for car air conditioning unit production line to prevent screw from falling inside.</li>
-            <li><strong>Impact:</strong> Claims -25%</li>
+            <li><strong>Impact:</strong> NOK parts −70%.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Thermal camera detection<span class="badge">Simatic 1500</span></h3>
-          <div class="meta">Implemented 4 thermal cameras to detect battery temperature before installation to EV</div>
+          <h3>Blanking plug detection<span class="badge">SIMATIC S7‑1200</span></h3>
+          <div class="meta">Sensors and AI cameras on 6 stations.</div>
           <ul>
-            <li>System with alarm for logistic operators and connection to fire department</li>
-            <li><strong>Impact:</strong> Decreased fire hazard during final assembly</li>
+            <li>Detection of blanking plugs for car A/C line to prevent screw fall‑in.</li>
+            <li><strong>Impact:</strong> Claims −25%.</li>
           </ul>
         </article>
-        
+
+        <article class="card">
+          <h3>Thermal camera detection<span class="badge">SIMATIC S7‑1500</span></h3>
+          <div class="meta">Four thermal cameras to detect battery temperature before installation in EVs.</div>
+          <ul>
+            <li>Alarm system for logistics; connection to fire department.</li>
+            <li><strong>Impact:</strong> Decreased fire hazard during final assembly.</li>
+          </ul>
+        </article>
+
       </div>
     </div>
-  </section> <!-- ====== CONTACT ====== --> <section class="section" id="contact">
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section class="section" id="contact">
     <div class="container">
       <div class="grid">
         <article class="card">
           <h2>Contact</h2>
-          <p><a href="mailto:tkacikto@gmail.com">Contact me</a>  · 
-          <a href="https://github.com/argenlo21" target="_blank" rel="noopener">Github</a>
+          <p>
+            <a class="btn" href="mailto:tkacikto@gmail.com">Contact me</a>
+            &nbsp;·&nbsp;
+            <a class="btn" href="https://github.com/argenlo21" target="_blank" rel="noopener">GitHub</a>
           </p>
         </article>
       </div>
     </div>
-  </section> <footer class="footer">
+  </section>
+
+  <footer class="footer">
     <div class="container">© <span id="year"></span> Tomáš Tkáčik</div>
-  </footer> <script>
+  </footer>
+
+  <script>
     // year
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -313,18 +358,6 @@
     };
     document.addEventListener('scroll', spy, {passive:true});
     window.addEventListener('load', spy);
-  </script></body>
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
