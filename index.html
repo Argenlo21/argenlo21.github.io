@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tomáš Tkáčik – Backend & Automation Engineer</title>
-  <meta name="description" content="Software + Industrial automation: .NET, React, SQL, OPC, TIA Portal. Portfolio with About, Software, Automation, Contact." />
+  <title>Tomáš Tkáčik – Backend & Integration Engineer</title>
+  <meta name="description" content="Industrial software & integrations: .NET, React, SQL, OPC UA, SCADA, IoT/Edge. Single-page portfolio with About, Projects, Integrations, Contact." />
   <meta name="theme-color" content="#0b1220">
-  <meta property="og:title" content="Tomáš Tkáčik – Backend & Automation Engineer">
-  <meta property="og:description" content="Software + Industrial automation: .NET, React, SQL, OPC, TIA Portal.">
+  <meta property="og:title" content="Tomáš Tkáčik – Backend & Integration Engineer">
+  <meta property="og:description" content="Building software bridges between data, devices and people: .NET APIs, real-time integrations (OPC UA/SCADA), dashboards & automation." />
   <meta property="og:type" content="website">
   <meta name="color-scheme" content="dark">
 
@@ -103,7 +103,7 @@
     }
   </style>
 
-  <!-- Analytics (kept) -->
+  <!-- Analytics -->
   <script defer data-domain="tkacik.dev" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
@@ -114,16 +114,16 @@
       <div class="spacer"></div>
       <div class="links" id="desktopLinks">
         <a href="#about">About</a>
-        <a href="#software">Software</a>
-        <a href="#automation">Automation</a>
+        <a href="#projects">Projects</a>
+        <a href="#integrations">Integrations</a>
         <a href="#contact">Contact</a>
       </div>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">☰</button>
     </div>
     <div class="mobile" id="mobileMenu" role="menu">
       <a href="#about" role="menuitem">About</a>
-      <a href="#software" role="menuitem">Software</a>
-      <a href="#automation" role="menuitem">Automation</a>
+      <a href="#projects" role="menuitem">Projects</a>
+      <a href="#integrations" role="menuitem">Integrations</a>
       <a href="#contact" role="menuitem">Contact</a>
     </div>
   </nav>
@@ -132,13 +132,14 @@
   <header class="hero" id="top">
     <div class="container">
       <div class="hero-card">
-        <h1>Backend & Automation Engineer</h1>
-        <p>I deliver systems that move metrics—reliably, measurably.</p>
+        <h1>Backend & Integration Engineer</h1>
+        <p>Designing software bridges between data, devices and people.</p>
         <p class="tag">Remote/Hybrid • SK/EU</p>
       </div>
       <div class="hero-card">
         <h2 style="margin:0 0 10px">Focus</h2>
-        <p class="tag">C#/.NET · ASP.NET · React · SQL · OPC · S7 communication · TIA Portal</p>
+        <p class="tag">C#/.NET · ASP.NET · React · SQL · OPC UA · SCADA · S7 communication</p>
+        <p class="tag">APIs · event-driven pipelines · real-time data</p>
       </div>
     </div>
   </header>
@@ -149,93 +150,85 @@
       <div class="grid">
         <article class="card">
           <h2>About me</h2>
-          <p>Backend and integration specialist connecting real‑time control systems (PLC/OPC) with enterprise data layers (SQL/SCADA). I design efficient, maintainable tools with an emphasis on measurable business outcomes.</p>
+          <p>Industrial software engineer with a backend mindset. I build .NET APIs, data services and dashboards that integrate shop‑floor signals (OPC UA/SCADA, S7) with enterprise layers (SQL, reporting). The goal is simple: measurable impact, maintainable systems, clear ownership.</p>
+          <p class="tag">.NET • REST/JSON • SQL • OPC UA • SCADA (Ignition) • React • CI/CD</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ====== SOFTWARE ====== -->
-  <section class="section" id="software">
+  <!-- ====== PROJECTS (software-first) ====== -->
+  <section class="section" id="projects">
     <div class="container">
-      <h2 style="margin:0 0 16px">Software projects</h2>
+      <h2 style="margin:0 0 16px">Projects</h2>
       <div class="split">
 
         <article class="card">
-          <h3>Project planning calculator<span class="badge">ASP · .NET · n8n</span></h3>
-          <div class="meta">Web app for faster, more accurate project cost estimates.</div>
+          <h3>Estimation API & UI<span class="badge">ASP.NET · React · n8n</span></h3>
+          <div class="meta">API‑driven cost estimation with automation workflows.</div>
           <ul>
-            <li>Linked to n8n for automation and AI integration.</li>
-            <li><strong>Impact:</strong> Increased <em>accuracy</em> of cost estimation.</li>
+            <li>.NET Web API + React front‑end; n8n for orchestration/AI assists.</li>
+            <li><strong>Impact:</strong> Faster quotes, higher estimate accuracy.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Finance management<span class="badge">ASP · .NET · React</span></h3>
-          <div class="meta">Clients overview, meeting planning, portfolio management.</div>
+          <h3>Advisor CRM<span class="badge">ASP.NET · React · SQL</span></h3>
+          <div class="meta">Client profiles, scheduling, portfolio snapshots.</div>
           <ul>
-            <li>Client management system with scheduling.</li>
-            <li><strong>Impact:</strong> Improved advisors’ time management.</li>
+            <li>Role‑based access, calendar integration, exportable reports.</li>
+            <li><strong>Impact:</strong> Improved advisor time management.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Process Control Tool + Notify Center <span class="badge">C# · SQL · ASP.NET · React</span></h3>
-          <div class="meta">Audit/approval of parameter changes; PDF exports; email notifications.</div>
+          <h3>Change Management Platform<span class="badge">C# · SQL · ASP.NET · React</span></h3>
+          <div class="meta">Auditable parameter changes with approvals & notifications.</div>
           <ul>
-            <li>User roles (Operator/Engineer), change browsing & comparison.</li>
-            <li><strong>Impact:</strong> Paperless parameters, strong traceability; response time −70%.</li>
+            <li>Diff views, PDF export, SMTP notifications, Operator/Engineer roles.</li>
+            <li><strong>Impact:</strong> Strong traceability; response time −70%.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Maintenance Logs <span class="badge">C# · .NET · SQL</span></h3>
-          <div class="meta">Team work overview, NC tracking, supplier follow‑up.</div>
+          <h3>Plant Telemetry Gateway<span class="badge">Ignition · OPC UA · SQL</span></h3>
+          <div class="meta">Real‑time data collection and alerting to reduce MTTR.</div>
           <ul>
-            <li>Unified logging of nonconformities and actions.</li>
-            <li><strong>Impact:</strong> Introduced <em>traceability</em> of claims across suppliers.</li>
+            <li>Historian tags, alarm routing, dashboards for status visibility.</li>
+            <li><strong>Impact:</strong> Quicker incident response across shifts.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Plant monitoring <span class="badge">C# · .NET · SQL · Ignition</span></h3>
-          <div class="meta">SCADA monitoring of production plant.</div>
+          <h3>Takt & Throughput Dashboard<span class="badge">KepServer · C# · SQL</span></h3>
+          <div class="meta">OPC UA readout with takt/ETA and changeover awareness.</div>
           <ul>
-            <li>Visualization of plant status with alarm screens.</li>
-            <li><strong>Impact:</strong> Reduced reaction time of plant workers to downtime.</li>
+            <li>Thin client UI (no dedicated HMI); shop‑floor friendly.</li>
+            <li><strong>Impact:</strong> Better information flow in production.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Part Counter <span class="badge">C# · KepServer · SQL</span></h3>
-          <div class="meta">OPC readout from PLC, live takt time & upcoming change.</div>
+          <h3>S7 Telemetry Service<span class="badge">S7.Net · C#</span></h3>
+          <div class="meta">Direct S7 register reads with resilient retries & caching.</div>
           <ul>
-            <li>Shopfloor visualization without dedicated HMI hardware.</li>
-            <li><strong>Impact:</strong> Better information flow on the shopfloor.</li>
+            <li>Fallback when OPC is unavailable; lightweight operator UI.</li>
+            <li><strong>Impact:</strong> Faster decisions, lower risk of errors.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Overwatch <span class="badge">C# · S7.Net</span></h3>
-          <div class="meta">Direct S7 register read; live material consumption.</div>
+          <h3>Quality Zones Signage<span class="badge">C# · SQL · OPC</span></h3>
+          <div class="meta">Dynamic content based on live production context.</div>
           <ul>
-            <li>Bypassed OPC where not available; lightweight UI for operators.</li>
-            <li><strong>Impact:</strong> Faster decisions, lower risk of material substitution.</li>
+            <li>Real‑time zone switching; media sourced from DB.</li>
+            <li><strong>Impact:</strong> Claims reduced by ~40%.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Q‑slides <span class="badge">C# · SQL · OPC</span></h3>
-          <div class="meta">Quality zones & dynamic content based on parts produced.</div>
-          <ul>
-            <li>Real‑time zone switching; images loaded from DB.</li>
-            <li><strong>Impact:</strong> Reduced claims by ~40%.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>LineSpy <span class="badge">C# · OPC</span></h3>
-          <div class="meta">Line status overview, hourly charts, bottleneck search.</div>
+          <h3>Line Analytics Microservice<span class="badge">C# · OPC</span></h3>
+          <div class="meta">Line status aggregation, hourly charts, bottleneck hunt.</div>
           <ul>
             <li><strong>Impact:</strong> Optimization time reduced by ~70%.</li>
           </ul>
@@ -245,62 +238,62 @@
     </div>
   </section>
 
-  <!-- ====== AUTOMATION ====== -->
-  <section class="section" id="automation">
+  <!-- ====== INTEGRATIONS (domain framing) ====== -->
+  <section class="section" id="integrations">
     <div class="container">
-      <h2 style="margin:0 0 16px">Automation projects</h2>
+      <h2 style="margin:0 0 16px">Integrations</h2>
       <div class="split">
 
         <article class="card">
-          <h3>Endpacking<span class="badge">SIMATIC S7‑1200</span></h3>
-          <div class="meta">VFD (frequency drive) communication changes & operator UI.</div>
+          <h3>VFD Telemetry Bridge<span class="badge">OPC UA</span></h3>
+          <div class="meta">Frequency drives telemetry & operator UI refactor.</div>
           <ul>
-            <li>Created visualization for operators & maintenance.</li>
-            <li><strong>Impact:</strong> Line downtime −30%.</li>
+            <li>Consolidated tags, simplified UX for maintainers.</li>
+            <li><strong>Outcome:</strong> Improved system uptime.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Sinamics retrofit<span class="badge">SINAMICS S120 & SIMATIC S7‑300</span></h3>
-          <div class="meta">Retrofit of old servo drives to SINAMICS; PLC logic changes.</div>
+          <h3>SINAMICS Retrofit<span class="badge">SINAMICS S120 · S7‑300</span></h3>
+          <div class="meta">Re‑platformed servo control; integration‑safe PLC changes.</div>
           <ul>
-            <li>Conveyor system with 3 conveyors for precision movement of parts.</li>
-            <li><strong>Impact:</strong> Line downtime −40%.</li>
+            <li>Deterministic motion data exposed to upper layers.</li>
+            <li><strong>Outcome:</strong> Lower unplanned downtime.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Double silo feeder<span class="badge">SIMATIC S7‑1200</span></h3>
-          <div class="meta">Automated double‑silo feeding to screw conveyor & packing unit.</div>
+          <h3>Double‑Silo Control Service<span class="badge">S7‑1200</span></h3>
+          <div class="meta">Automated feed control; monitored in hazardous environment.</div>
           <ul>
-            <li>Explosion‑hazard environment.</li>
-            <li><strong>Impact:</strong> Reduced need for manual silo management.</li>
+            <li>Rule‑based logic with operator overrides.</li>
+            <li><strong>Outcome:</strong> Less manual intervention.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Retention ring detection<span class="badge">Keyence IV4</span></h3>
-          <div class="meta">AI camera on press to detect missing retention ring presence.</div>
+          <h3>Retention Ring Vision<span class="badge">Keyence IV4</span></h3>
+          <div class="meta">Vision signal → data layer; early defect prevention.</div>
           <ul>
-            <li><strong>Impact:</strong> NOK parts −70%.</li>
+            <li><strong>Outcome:</strong> Defects (NOK) −70%.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Blanking plug detection<span class="badge">SIMATIC S7‑1200</span></h3>
-          <div class="meta">Sensors and AI cameras on 6 stations.</div>
+          <h3>Blanking Plug Vision<span class="badge">S7‑1200</span></h3>
+          <div class="meta">Sensors & AI cameras synced across 6 stations.</div>
           <ul>
-            <li>Detection of blanking plugs for car A/C line to prevent screw fall‑in.</li>
-            <li><strong>Impact:</strong> Claims −25%.</li>
+            <li>Prevents foreign‑object ingress; signals surfaced to UI.</li>
+            <li><strong>Outcome:</strong> Claims −25%.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h3>Thermal camera detection<span class="badge">SIMATIC S7‑1500</span></h3>
-          <div class="meta">Four thermal cameras to detect battery temperature before installation in EVs.</div>
+          <h3>EV Battery Temp Screening<span class="badge">S7‑1500</span></h3>
+          <div class="meta">Thermal cameras with alerting and emergency signaling.</div>
           <ul>
-            <li>Alarm system for logistics; connection to fire department.</li>
-            <li><strong>Impact:</strong> Decreased fire hazard during final assembly.</li>
+            <li>Logistics alerts; fire‑dept link; pre‑assembly check.</li>
+            <li><strong>Outcome:</strong> Reduced safety risk.</li>
           </ul>
         </article>
 
@@ -318,8 +311,6 @@
             <a class="btn" href="mailto:tkacikto@gmail.com">Contact me</a>
             &nbsp;·&nbsp;
             <a class="btn" href="https://github.com/argenlo21" target="_blank" rel="noopener">GitHub</a>
-            &nbsp;.&nbsp;
-	          <a class="btn" href="https://linkedin.com/in/tomáš-t-475421153" target="_blank" rel="noopener">LinkedIn</a>
           </p>
         </article>
       </div>
@@ -363,4 +354,3 @@
   </script>
 </body>
 </html>
-
